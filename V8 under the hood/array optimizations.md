@@ -1,1 +1,2 @@
-array optimizations
+Reading beyond an array bound has an unexpected impact on performance: 
+Once that happens, JS will lookup the prototype path of that array, which is an expensive operation *per se*, and mark it as an object that needs to deal with special cases, permanently affecting its performance by a factor of up to **6x**.
